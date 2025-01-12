@@ -136,22 +136,14 @@ n_hidden_channels_3 = 500
 n_hidden_channels_4 = 200 
 
 q_func = chainerrl.links.StatelessRecurrentSequential(
-#            L.Convolution1D(64, 32, 2, stride=2, pad=0),
-#            F.relu,
-#            L.Convolution1D(32, 32, 2, stride=2, pad=0),
-#            F.relu,
-#            L.Convolution1D(32, 16, 2, stride=1, pad=0),
-#            functools.partial(F.reshape, shape=(-1, 3136)),
-#            F.relu,
+
             L.Linear(obs_size, n_hidden_channels_1),
             F.relu,
             L.Linear(n_hidden_channels_1, n_hidden_channels_2),
             F.relu,
             L.Linear(n_hidden_channels_2, n_hidden_channels_3),
-            #functools.partial(F.reshape, shape=(-1, reshaped_channel)),            
-#            functools.partial(F.reshape( shape=(-1, reshaped_channel))),     
+
             F.relu,
-#            L.Linear(n_hidden_channels_3, 100),
             L.NStepLSTM(1, n_hidden_channels_3, n_hidden_channels_4, 0),
             F.relu,
             L.NStepLSTM(1, n_hidden_channels_4, n_hidden_channels_4, 0),
@@ -159,72 +151,8 @@ q_func = chainerrl.links.StatelessRecurrentSequential(
             DiscreteActionValue,
         )
 replay_buffer = replay_buffer.EpisodicReplayBuffer(10 ** 6)
-        # Replay buffer that stores whole episodes
-#rbuf = replay_buffer.EpisodicReplayBuffer(10 ** 6)
-#    def __call__(self, x, test=False):
-#        h = F.relu(l0(x))
-#        h = F.relu(l1(h))
-#        h = F.relu(l2(h))
-#        h = l3(h)
-#        return chainerrl.action_value.DiscreteActionValue(h)
-#            DiscreteActionValue,
-#        )
-#            n_hidden_channels = 100
-#            obs_size=start_frame*2
-#            n_hidden_channels_1 = 100
-#            n_hidden_channels_2 = 50
-#            self.l0=L.Linear(obs_size, n_hidden_channels_1)
-#            self.l1=L.Linear(n_hidden_channels_1, n_hidden_channels_2)
-#            self.l2=L.Linear(n_hidden_channels_2, n_hidden_channels_2)
-#            self.l3=L.Linear(n_hidden_channels_2, n_actions)
-#    def __call__(self, x, test=False):
-#        h = F.tanh(self.l0(x))
-#        h = F.tanh(self.l1(h))
-#        h = self.l2(h)
-#        return chainerrl.action_value.DiscreteActionValue(h)
-
-#chainer.functions.mean_squared_error(x, y)
-#print(x.data)
-#あるいは
-#print(x.data.shape)
-#recurrent=True
-#n_actions = env.action_space.n
-#if recurrent:
-# Q-network with LSTM
-#q_func = chainerrl.links.StatelessRecurrentSequential(
-#    L.Convolution2D(None, 32, 8, stride=4),
-#    F.relu,
-#    L.Convolution2D(None, 64, 4, stride=2),
-#    F.relu,
-#    L.Convolution2D(None, 64, 3, stride=1),
-#    functools.partial(F.reshape, shape=(-1, 3136)),
-#    F.relu,
-#    L.NStepLSTM(1, 3136, 512, 0),
-#    L.Linear(None, n_actions),
-#    DiscreteActionValue,
-#        )
-        # Replay buffer that stores whole episodes
-#rbuf = replay_buffer.EpisodicReplayBuffer(10 ** 6)
-#else:
-#        # Q-network without LSTM
-#        q_func = chainer.Sequential(
-#            L.Convolution2D(None, 32, 8, stride=4),
-#            F.relu,
-#            L.Convolution2D(None, 64, 4, stride=2),
-#            F.relu,
-#            L.Convolution2D(None, 64, 3, stride=1),
-#            functools.partial(F.reshape, shape=(-1, 3136)),
-#            L.Linear(None, 512),
-#            F.relu,
-#            L.Linear(None, n_actions),
-#            DiscreteActionValue,
-#        )
-        # Replay buffer that stores transitions separately
-        #rbuf = replay_buffer.ReplayBuffer(10 ** 6)
 
 
-#just for deb
-#print(env.observation_space.shape[0])
 
 
 # 最適化アルゴリズムの設定
