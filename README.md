@@ -10,11 +10,11 @@ stocks -v 0 was rewritten to suite BTC-USD with DRQN refinforcement learning.
 is a file obtained from bistamp recording minute info of BTCUSD
 locate this under the data in the following path. 
 
-> gym-anytrading/gym_anytrading/datasets/data
+` gym-anytrading/gym_anytrading/datasets/data `
 
-###Usage
+### Usage
 pip install or install above gym anytrading via github
-then python
+then python DItradingtryout_Full_DRQN.py
 
 The above directory was in python site packages so you might want to change it to your desired site. 
 To do so, change the init.py in gym-anytrading/gym_anytrading
