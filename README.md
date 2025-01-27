@@ -35,4 +35,5 @@ python DItradingtryout_Full_DRQN.py
    Will update
 
 
-Not an investment/financial advice. Invest at your own risk
+
+# Not an investment/financial advice. Invest at your own risk
