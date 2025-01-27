@@ -1,8 +1,7 @@
-# Main Heading (H1)
 # ReinforecementLearningDRQN
 
-Reinforcement learning using Open AI gym and the following gym-stock-trading.
-[https://github.com/duhfrazee/gym-stock-trading](https://github.com/AminHP/gym-anytrading)
+## Reinforcement learning using Open AI gym and the following gym-stock-trading.
+[Link Text]([https://github.com/duhfrazee/gym-stock-trading](https://github.com/AminHP/gym-anytrading))
 
 stocks -v 0 was rewritten to suite BTC-USD with DRQN refinforcement learning.
 
