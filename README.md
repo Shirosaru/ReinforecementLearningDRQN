@@ -17,9 +17,14 @@ To do so, change the init.py in gym-anytrading/gym_anytrading
 
 
 ### Usage
-```python
-pip install
-```
+1) make OHLC data from bitstamp. Time frame can be what you want. I tried this in h5 format but can be csv.
+2) get gym-anytrading
+   ```python
+   pip install gym-anytrading
+   ```
+3) put h5/csv data under  gym-anytrading/gym_anytrading/datasets/data
+   a bit hard to locate but is under the python site-packages 
+5) Download DItradingtryout_Full_DRQN.py
 or install above gym anytrading via github
 then 
 
