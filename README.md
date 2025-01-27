@@ -24,14 +24,15 @@ To do so, change the init.py in gym-anytrading/gym_anytrading
    ```
 3) put h5/csv data under  gym-anytrading/gym_anytrading/datasets/data
    a bit hard to locate but is under the python site-packages 
-5) Download DItradingtryout_Full_DRQN.py
-or install above gym anytrading via github
+4) Download DItradingtryout_Full_DRQN.py
 then 
 
 ```python
 python DItradingtryout_Full_DRQN.py
 ```
-
+5) Default is just the stocks-vo Close and timeframe, but this can be adjusted to input more parameters.
+   5-7 input parameters was about the sweetspot.
+   Will update
 
 
 Not an investment/financial advice. Invest at your own risk
