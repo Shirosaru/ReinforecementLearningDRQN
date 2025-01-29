@@ -31,7 +31,8 @@ then
 python DItradingtryout_Full_DRQN.py
 ```
 5) Default is just the stocks-vo Close and timeframe, but this can be adjusted to input more parameters.
-   in the env directory, put the following and repath the util files.
+
+   In the env directory, put the following and repath the util files.
    \\wsl.localhost\Ubuntu\home\name\miniconda3\lib\python3.9\site-packages\gym_anytrading\envs
    
    stocks_orig_env.py
