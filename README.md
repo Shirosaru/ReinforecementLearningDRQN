@@ -31,8 +31,10 @@ then
 python DItradingtryout_Full_DRQN.py
 ```
 5) Default is just the stocks-vo Close and timeframe, but this can be adjusted to input more parameters.
+   in the env directory put the following and repath the util files.
+   stocks_orig_env.py
    5-7 input parameters was about the sweetspot.
-   Will update
+   
 
 
 
